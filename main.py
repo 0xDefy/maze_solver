@@ -122,13 +122,12 @@ class Maze:
         self.cell_size_x = cell_size_x
         self.cell_size_y = cell_size_y
         self.win = win
-        self._cells = []  # Initialize self._cells as an empty list
+        self._cells = []
         self._create_cells()
 
     def _create_cells(self):
-        # Create a 2D grid of cells
         for i in range(self.num_cols):
-            self._cells.append([])  # Append a new column to the grid
+            self._cells.append([])
             for j in range(self.num_rows):
                 cell_x1 = self.x1 + i * self.cell_size_x
                 cell_y1 = self.y1 + j * self.cell_size_y
@@ -150,7 +149,7 @@ class Maze:
         y1 = cell.y1
         x2 = cell.x2
         y2 = cell.y2
-        cell.draw(x1, y1, x2, y2)  # Use cell's draw method
+        cell.draw(x1, y1, x2, y2)
         self._animate()
 
     def _animate(self):
